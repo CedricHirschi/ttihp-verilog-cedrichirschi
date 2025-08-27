@@ -5,7 +5,11 @@ from xml.parsers.expat import errors
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles, Edge
-import matplotlib.pyplot as plt
+
+try:
+    import matplotlib.pyplot as plt
+except ImportError:
+    plt = None
 
 TIMEOUT = 20
 
@@ -90,23 +94,24 @@ async def test_project(dut):
 
     comp_task.kill()
 
-    print(results)
-    print(expecteds)
+    dut._log.info(f"{results=}")
+    dut._log.info(f"{expecteds=}")
 
     errors = [((result if result is not None else 0) - expected) for result, expected in zip(results, expecteds)]
-    print(errors)
+    dut._log.info(f"{errors=}")
 
-    plt.figure(figsize=(12, 6))
-    plt.subplot(2, 1, 1)
-    plt.plot(expecteds, results, 'o-')
-    plt.ylabel("Output")
-    plt.grid()
-    plt.subplot(2, 1, 2)
-    plt.plot(expecteds, errors, 'o-')
-    plt.xlabel("Input")
-    plt.ylabel("Error")
-    plt.grid()
-    plt.savefig("test_output.png")
+    if plt is not None:
+        plt.figure(figsize=(12, 6))
+        plt.subplot(2, 1, 1)
+        plt.plot(expecteds, results, 'o-')
+        plt.ylabel("Output")
+        plt.grid()
+        plt.subplot(2, 1, 2)
+        plt.plot(expecteds, errors, 'o-')
+        plt.xlabel("Input")
+        plt.ylabel("Error")
+        plt.grid()
+        plt.savefig("test_output.png")
 
     # dut.ui_in = 0b0000_0001 # Set CS high, the rest low
     # await ClockCycles(dut.clk, 1)

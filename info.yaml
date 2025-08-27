@@ -18,39 +18,40 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.sv"
+    - "sar.sv"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 # This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
 pinout:
   # Inputs
-  ui[0]: "cs_ni"
-  ui[1]: "mosi_i"
-  ui[2]: "start_i"
-  ui[3]: "comp_i"
+  ui[0]: "start_i"
+  ui[1]: "comp_i"
+  ui[2]: ""
+  ui[3]: ""
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: "miso_o"
-  uo[1]: "ready_o"
-  uo[2]: ""
-  uo[3]: ""
-  uo[4]: "dac0_0"
-  uo[5]: "dac1_0"
-  uo[6]: "dac2_0"
-  uo[7]: "dac3_0"
+  uo[0]: "dac0_o"
+  uo[1]: "dac1_o"
+  uo[2]: "dac2_o"
+  uo[3]: "dac3_o"
+  uo[4]: "dac4_o"
+  uo[5]: "dac5_o"
+  uo[6]: "dac6_o"
+  uo[7]: "dac7_o"
 
   # Bidirectional pins
-  uio[0]: "dac4_0"
-  uio[1]: "dac5_0"
-  uio[2]: "dac6_0"
-  uio[3]: "dac7_0"
-  uio[4]: "dac8_0"
-  uio[5]: "dac9_0"
-  uio[6]: "dac10_0"
-  uio[7]: "dac11_0"
+  uio[0]: "result0_o"
+  uio[1]: "result1_o"
+  uio[2]: "result2_o"
+  uio[3]: "result3_o"
+  uio[4]: "result4_o"
+  uio[5]: "result5_o"
+  uio[6]: "result6_o"
+  uio[7]: "result7_o"
 
 # Do not change!
 yaml_version: 6
