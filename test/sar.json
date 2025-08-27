@@ -1,0 +1,83 @@
+{
+  "extensionVersion": "1.3.4",
+  "fileName": "c:\\dev\\github\\ttihp-verilog-cedrichirschi\\test\\tb.vcd",
+  "markerTime": null,
+  "altMarkerTime": null,
+  "selectedSignal": null,
+  "zoomRatio": 0.00002,
+  "scrollLeft": 0,
+  "displayedSignals": [
+    {
+      "netlistId": 22,
+      "name": "tb.user_project.sar_inst.clk_i",
+      "numberFormat": "binary",
+      "colorIndex": 0,
+      "renderType": "binary",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 25,
+      "name": "tb.user_project.sar_inst.rst_ni",
+      "numberFormat": "binary",
+      "colorIndex": 0,
+      "renderType": "binary",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 26,
+      "name": "tb.user_project.sar_inst.start_i",
+      "numberFormat": "binary",
+      "colorIndex": 0,
+      "renderType": "binary",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 23,
+      "name": "tb.user_project.sar_inst.comp_i",
+      "numberFormat": "binary",
+      "colorIndex": 0,
+      "renderType": "binary",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 24,
+      "name": "tb.user_project.sar_inst.rdy_o",
+      "numberFormat": "binary",
+      "colorIndex": 2,
+      "renderType": "binary",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 27,
+      "name": "tb.user_project.sar_inst.result_o",
+      "numberFormat": "hexadecimal",
+      "colorIndex": 2,
+      "renderType": "multiBit",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 28,
+      "name": "tb.user_project.sar_inst.dac_o",
+      "numberFormat": "hexadecimal",
+      "colorIndex": 0,
+      "renderType": "multiBit",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 34,
+      "name": "tb.user_project.sar_inst.mask_q",
+      "numberFormat": "hexadecimal",
+      "colorIndex": 1,
+      "renderType": "multiBit",
+      "valueLinkCommand": ""
+    },
+    {
+      "netlistId": 42,
+      "name": "tb.user_project.sar_inst.state_q",
+      "numberFormat": "hexadecimal",
+      "colorIndex": 1,
+      "renderType": "multiBit",
+      "valueLinkCommand": ""
+    }
+  ]
+}
