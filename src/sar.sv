@@ -1,5 +1,3 @@
-`timescale 1ns/1ps
-
 module sar #(
     parameter integer RESOLUTION     = 8 //! ADC resolution in bits
   ) (
